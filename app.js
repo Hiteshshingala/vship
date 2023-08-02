@@ -6,6 +6,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const marineRouter = require('./routes/marine');
 const _logger = require('./services/logger');
 const cors = require('cors');
 const app = express();
@@ -25,6 +26,7 @@ app.use(cors({
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/marine', marineRouter);
 app.use((err, req, res, next) => {
   _logger.error(err.stack);
   res.status(500).send('Something went wrong!')
