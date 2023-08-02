@@ -15,22 +15,22 @@ router.get('/projects', function(req, res, next) {
   res.status(status).send(payload);
 });
 
-router.get('/priority', function(req, res, next) {
-  logger.log("info", 'get priority called');
-  const {status, payload} = responseService.handleSuccess(200, 'successfully get priority', []);
-  res.status(status).send(payload);
+router.get('/spare-part-type', function(req, res, next) {
+    logger.log("info", 'get spare part type called');
+    const {status, payload} = responseService.handleSuccess(200, 'successfully get order spare part type', []);
+    res.status(status).send(payload);
 });
 
-router.get('/order-type', function(req, res, next) {
-  logger.log("info", 'get order type called');
-  const {status, payload} = responseService.handleSuccess(200, 'successfully get order type', []);
-  res.status(status).send(payload);
+router.get('/port-list', function(req, res, next) {
+    logger.log("info", 'get port list called');
+    const {status, payload} = responseService.handleSuccess(200, 'successfully get port list', []);
+    res.status(status).send(payload);
 });
 
-router.get('/departments', function(req, res, next) {
-  logger.log("info", 'get departments called');
-  const {status, payload} = responseService.handleSuccess(200, 'successfully get order departments', []);
-  res.status(status).send(payload);
+router.get('/home-port', function(req, res, next) {
+    logger.log("info", 'get home port called');
+    const {status, payload} = responseService.handleSuccess(200, 'successfully get home port', []);
+    res.status(status).send(payload);
 });
 
 router.get('/spare-part-details', function(req, res, next) {
